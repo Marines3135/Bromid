@@ -1,0 +1,31 @@
+:root { color-scheme: dark; font-family: "Segoe UI", sans-serif; background: #180000; }
+:root[data-theme="light"] { color-scheme: light; background: #fff6f8; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+.chrome { height: 94px; background: linear-gradient(105deg, #650004 0%, #430002 48%, #190000 100%); border-bottom: 1px solid #760b13; user-select: none; }
+.tab-row { height: 45px; display: flex; align-items: end; padding: 7px 9px 0; gap: 7px; }
+.tabs { display: flex; gap: 5px; flex: 1; min-width: 0; overflow: hidden; }
+.tab { height: 38px; max-width: 210px; min-width: 110px; flex: 1 1 160px; display: flex; align-items: center; gap: 8px; padding: 0 9px 0 13px; border-radius: 9px 9px 0 0; color: #b9c0cf; cursor: pointer; transition: background .18s ease, color .18s ease, flex-basis .28s cubic-bezier(.2,.8,.2,1); }
+.tab:hover { background: linear-gradient(145deg, #760b13, #310001); } .tab.active { background: linear-gradient(145deg, #3d0002, #180000); color: #fff6f8; }
+.tab span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; font-size: 13px; }
+.tab-logo { width: 17px; height: 17px; border-radius: 5px; object-fit: cover; flex: 0 0 auto; }
+button { border: 0; background: transparent; color: #f1c8d5; cursor: pointer; border-radius: 6px; font-size: 19px; width: 31px; height: 31px; }
+button:hover:not(:disabled) { background: linear-gradient(145deg, #840d17, #3d0003); } button:disabled { color: #9d7080; cursor: default; }
+.new-tab { margin-bottom: 4px; font-size: 23px; }
+.tab.appearing { animation: tab-appear .34s cubic-bezier(.16,.9,.25,1) both; transform-origin: right center; }
+.new-tab.creating { animation: plus-pulse .32s ease-out both; }
+@keyframes tab-appear { 0% { opacity: 0; transform: translateX(18px) translateY(5px) scaleX(.72); filter: brightness(1.45); } 62% { opacity: 1; transform: translateX(-2px) translateY(-1px) scaleX(1.025); } 100% { opacity: 1; transform: translateX(0) translateY(0) scaleX(1); filter: brightness(1); } }
+@keyframes plus-pulse { 0% { transform: scale(1); } 42% { transform: scale(1.22) rotate(12deg); color: #fff; background: #8e0a13; } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .tab, .tab.appearing, .new-tab.creating { transition: none; animation: none; } }
+.tab button { width: 23px; height: 23px; font-size: 18px; line-height: 18px; }
+.navigation { height: 49px; display: flex; align-items: center; gap: 4px; padding: 7px 12px; }
+#address { height: 34px; flex: 1; min-width: 0; border: 1px solid #711019; border-radius: 17px; outline: none; background: linear-gradient(145deg, #310001, #170000); color: #fff6f8; padding: 0 16px; font: 14px "Segoe UI", sans-serif; }
+#address:focus { border-color: #e47a72; background: linear-gradient(145deg, #3d0002, #1c0000); }
+dialog { width: min(440px, calc(100vw - 32px)); border: 1px solid #8b121b; border-radius: 14px; padding: 0; background: linear-gradient(145deg, #590003, #170000); color: #fff6f8; box-shadow: 0 20px 70px #180000cc; }
+dialog::backdrop { background: #06080db8; }
+#settings-form { padding: 20px; display: grid; gap: 16px; }
+.dialog-heading { display: flex; justify-content: space-between; align-items: center; } .dialog-heading h2 { margin: 0; font-size: 19px; }
+#settings-form label { display: grid; gap: 7px; color: #f0c5d3; font-size: 13px; }
+#settings-form input, #settings-form select { height: 37px; border: 1px solid #84101a; border-radius: 7px; background: linear-gradient(145deg, #310001, #150000); color: #fff6f8; padding: 0 10px; font: 14px "Segoe UI", sans-serif; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; } .dialog-actions button { width: auto; padding: 0 14px; font-size: 14px; } .dialog-actions .primary { background: linear-gradient(145deg, #b51421, #5a0004); color: white; }
+:root[data-theme="light"] .chrome { background: #f4d9e1; border-color: #d7a7b7; } :root[data-theme="light"] .tab.active { background: #fff6f8; color: #401020; } :root[data-theme="light"] .tab { color: #835064; } :root[data-theme="light"] #address { background: white; color: #401020; } :root[data-theme="light"] dialog { background: #fff6f8; color: #401020; } :root[data-theme="light"] #settings-form label { color: #6e3348; } :root[data-theme="light"] #settings-form input, :root[data-theme="light"] #settings-form select { background: white; color: #401020; border-color: #d7a7b7; }

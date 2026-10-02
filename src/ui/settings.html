@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Настройки Bromid</title>
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Настройки</h1>
+      <form id="settings-form">
+        <label>Домашняя страница<input id="home-page" type="url" placeholder="https://example.com" /></label>
+        <label>Поисковая система
+          <select id="search-engine"><option value="google">Google</option><option value="yandex">Яндекс</option><option value="duckduckgo">DuckDuckGo</option></select>
+        </label>
+        <label>Тема
+          <select id="theme"><option value="dark">Тёмная</option><option value="light">Светлая</option></select>
+        </label>
+        <div class="actions"><button id="reset" type="button">Сбросить</button><button class="primary" type="submit">Сохранить</button></div>
+      </form>
+    </main>
+    <script src="settings.js"></script>
+  </body>
+</html>

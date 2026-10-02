@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bromid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="chrome">
+      <div class="tab-row"><div id="tabs" class="tabs"></div><button id="new-tab" class="new-tab" title="Новая вкладка">+</button></div>
+      <form id="navigation" class="navigation">
+        <button id="back" type="button" title="Назад">←</button>
+        <button id="forward" type="button" title="Вперёд">→</button>
+        <button id="reload" type="button" title="Обновить">↻</button>
+        <input id="address" type="text" autocomplete="off" spellcheck="false" placeholder="Введите адрес или поисковый запрос" />
+        <button id="menu" type="button" title="Меню Bromid">⋮</button>
+      </form>
+    </header>
+    <dialog id="settings-dialog">
+      <form id="settings-form" method="dialog">
+        <div class="dialog-heading"><h2>Настройки</h2><button id="close-settings" type="button" title="Закрыть">×</button></div>
+        <label>Домашняя страница<input id="home-page" type="url" placeholder="https://example.com" /></label>
+        <label>Поисковая система
+          <select id="search-engine"><option value="google">Google</option><option value="yandex">Яндекс</option><option value="duckduckgo">DuckDuckGo</option></select>
+        </label>
+        <label>Тема
+          <select id="theme"><option value="dark">Тёмная</option><option value="light">Светлая</option></select>
+        </label>
+        <div class="dialog-actions"><button id="reset-settings" type="button">Сбросить</button><button class="primary" value="save">Сохранить</button></div>
+      </form>
+    </dialog>
+    <script src="renderer.js"></script>
+  </body>
+</html>

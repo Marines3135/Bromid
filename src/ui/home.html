@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новая вкладка</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <main>
+      <div class="brand"><img src="../assets/bromid-logo.png" alt="Логотип Bromid" /><strong>Bromid</strong></div>
+      <div class="section-heading"><p class="greeting">Закладки</p><button id="manage" type="button">Изменить</button></div>
+      <section id="shortcuts" class="shortcuts" aria-label="Закладки"></section>
+      <p class="hint">Или введите адрес либо запрос в строку сверху</p>
+    </main>
+    <dialog id="editor">
+      <form id="bookmark-form">
+        <h2 id="editor-title">Новая закладка</h2>
+        <label>Название<input id="bookmark-title" maxlength="64" required /></label>
+        <label>Ссылка<input id="bookmark-url" type="url" placeholder="https://example.com" required /></label>
+        <div class="editor-actions"><button id="cancel" type="button">Отмена</button><button class="primary" type="submit">Сохранить</button></div>
+      </form>
+    </dialog>
+    <script src="home.js"></script>
+  </body>
+</html>

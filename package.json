@@ -1,0 +1,21 @@
+{
+  
+  "name": "bromid",
+  "version": "0.1.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "set \"ELECTRON_RUN_AS_NODE=\" && electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.bromid.browser",
+    "productName": "Bromid",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/bromid-logo.png"
+    }
+  }
+}
